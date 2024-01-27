@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(3, 105, 142);
+}
+
+.Countdown{
+    width: 300px;
+    height: 200px;
+    margin: 100px auto;
+    color: rgb(92, 108, 112);
+    background: whitesmoke;
+    padding: 15px 50px 100px;
+    text-align: center;
+    font-size: 30px;
+    border: 1px;
+    border-radius: 10px 30px;
+    box-shadow: 2px 4px 5px rgb(11, 178, 175);
+}
+
+#hr, #min, #sec{
+    border: 2px solid cadetblue;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+    font-size: 40px;
+    font-family: 'Acme', sans-serif;
+}
+button{
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgb(88, 194, 233);
+    border: none;
+    cursor: pointer;
+}
