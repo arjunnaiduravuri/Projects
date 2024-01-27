@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="clock">
+        <div class="display"></div>
+        <div class="labels">
+            <span class="hour-label">Hours</span>
+            <span class="minute-label">Minutes</span>
+            <span class="second-label">Seconds</span>
+        </div>
+    </div>
+
+    <script>
+      setInterval(function(){
+        const clock = document.querySelector(".display");
+        let time = new Date();
+        let sec = time.getSeconds();
+        let min = time.getMinutes();
+        let hr = time.getHours();
+        let day = 'AM';
+
+
+        if (sec < 10) {
+            sec = '0' + sec
+        }
+        if (min < 10) {
+            min = '0' + min
+        }
+        if (hr < 10) {
+            hr = '0' + hr
+        }
+        if (hr > 12){
+          day = 'PM';
+          hr = '0' + ( hr - 12);
+        }
+        
+        clock.textContent = hr + ':' + min + ':' + sec + ' ' + day ;
+      });
+    </script>
+
+  </body>
+</html>
