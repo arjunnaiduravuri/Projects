@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nova+Square&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.border-container {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width:400px;
+}  
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#loginForm, #signUpForm{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+#loginButton{
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: rgb(5, 111, 218);
+    color: white;
+    border: none;
+    border-radius: 8px 15px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid rgb(0, 183, 255);
+}
+
+#signIn, .sign{
+    margin-top: 5px;
+    padding: 8px;
+    background-color: rgb(5, 111, 218);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+p{
+    font-size: 15px;
+    text-align: center;
+}
