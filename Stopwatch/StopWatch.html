@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <div class="stopwatch">
+      <h2>Stopwatch</h2>
+        <div class="time">
+            <span id="min">00</span>
+            <span id="sec">00</span>
+            <span id="ms">00</span>
+        </div>
+        <br>
+        <button id="start" > Start</button>
+        <button id="stop" > Stop</button> <br>
+        <button id="reset" > Reset</button>
+    </div>
+
+
+    <script>
+        var minute = document.getElementById('min');
+        var ms = document.getElementById('ms');
+        var second = document.getElementById('sec');
+
+
+        let mins = 0
+        let secs = 0
+        let msecs = 0
+        let Interval;
+
+        const timer = () =>{
+          msecs++;
+
+          if(msecs < 9){
+              ms.textContent = '0' + msecs
+          }else if(msecs > 9){
+              ms.textContent = msecs
+          }
+
+          if(msecs > 99){
+              secs++
+              second.textContent = '0' + secs
+              msecs = 0
+              ms.textContent = '0' + msecs
+          }
+
+          if(secs > 9){
+            second.textContent = secs
+          }
+
+          if(secs > 59){
+            mins++
+            minute.textContent = '0' + mins
+            secs = 0
+            second.textContent = '0' + secs
+          }
+        }
+
+        document.getElementById("start").addEventListener("click",() => interval = setInterval(timer, 10))
+
+        document.getElementById("stop").addEventListener("click", () => clearInterval(interval));
+
+        document.getElementById("reset").addEventListener("click", () => {
+            clearInterval(interval);
+            mins = secs = msecs = 0;
+            minute.textContent = '00';
+            second.textContent = '00';
+            ms.textContent = '00';
+        });
+        
+      
+    </script>
+</body>
+</html>
