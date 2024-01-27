@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="count">
+        <div id="container">
+            <span class="minus" onclick="minus()">-</span>
+            <span class="number">0</span>
+            <span class="plus" onclick="plus()">+</span>
+        </div>
+        <div id="button">
+            <button class="reset-btn" onclick="reset()">Reset</button>
+        </div>
+    </div>
+    <div class="text">
+        <span>COUNTER</span>
+    </div>
+
+    <script>
+        let count = 0;
+        let num = document.querySelector('.number')
+
+        function minus(){
+                count--;
+                num.innerText = count
+        }
+
+        function plus(){
+            count++;
+            num.innerText = count
+        }
+
+        function reset(){
+            count = 0
+            num.innerText = count
+        }
+    </script>
+
+</body>
+</html>
