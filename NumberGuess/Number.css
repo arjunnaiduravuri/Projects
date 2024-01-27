@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(143, 222, 236);
+    color: black;
+    width: fit-content;
+}
+
+.container{
+    position: absolute;
+    width: 350px;
+    transform: translate(-50%,-50%);
+    top: 47%;
+    left: 50%;
+    background-color: white;
+    height: 300px;
+    padding: 50px 10px;
+    border-radius: 8px;
+}
+
+h2{
+    font-family: 'Rubik Lines', sans-serif;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+h4, #guess, #message1{
+    margin-top: 25px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+input{
+    width: 32px;
+    background-color: rgb(18, 167, 236);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 140px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+
+button{
+    font-family: 'Rubik Doodle Shadow', sans-serif;
+    margin-left: 73px;
+    margin-top: 20px;
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(18, 167, 236);
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 10px 15px;
+    font-size: 18px;
+}
+
+footer{
+    position: absolute;
+    top: 90%;
+    left: 44%;
+    font-size: 12px;
+    color: black;
+}
